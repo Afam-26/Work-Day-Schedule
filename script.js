@@ -15,7 +15,7 @@ let saveBtnEl9 = $("#saveBtn-9")
 // current day and time
 function setTime() {
     let today = moment();
-    currentDayEl.text("Current Day: " + today.format('MMMM Do YYYY, h:mm:ss a'));
+    currentDayEl.text("Current Day & Time: " + today.format('MMMM Do YYYY, h:mm:ss a'));
 
 }
 
@@ -25,15 +25,28 @@ function saveEl1(event){
     event.preventDefault();
     let work1 = $("#work1").val();
     window.localStorage.setItem("9am", work1);   
-    let t = new Date().getHours();
-    if(t  > 9){
-        // $("#work").css({"background-color":"red"});
-        document.body.style.backgroundColor="orange";
-    }else {
-        // $("#work").css({"background-color":"yellow"});
-        document.body.style.backgroundColor="red";
-    }
+   
 };
+
+function hourUpdate(){
+    let currentHour = parseInt(moment().format("H"));
+
+    $(".hours").each(function(){
+        let otherHours = parseInt($(this).attr("id").split("military-")[1]);
+    
+    if(otherHours < currentHour) {
+        $(this).find("input").addClass("past");
+    }else if(otherHours === currentHour) {
+        $(this).find("input").removeClass("past");
+        $(this).find("input").addClass("present");
+    }else{
+        $(this).find("input").removeClass("past");
+        $(this).find("input").removeClass("present");
+        $(this).find("input").addClass("future");
+    }
+    })
+}
+hourUpdate();
 
 function loadPlanner1() {
     let work1 = localStorage.getItem("9am");
