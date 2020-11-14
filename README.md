@@ -9,7 +9,7 @@ This is a calendar application that allows the user to save events for each hour
 ![Workday planner](./assets/work2.png)
 
 ## Screen Shot
-![Storage](./assets/storage.png)
+![Storage page](./assets/storage.png)
 
 ### Video
 
