@@ -15,4 +15,8 @@ This is a calendar application that allows the user to save events for each hour
 
 [![Screen video](./Work-day.webM)](https://drive.google.com/file/d/1Kqdd_97pd8iQatkKJ0UXEGh9MevlzZ4W/view)
 
+## Link to application
+
+[Click here](https://github.com/Afam-26/Work-Day-Schedule.git/)
+
   
