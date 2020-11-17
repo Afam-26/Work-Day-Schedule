@@ -17,6 +17,6 @@ This is a calendar application that allows the user to save events for each hour
 
 ## Link to application
 
-[Click here](https://github.com/Afam-26/Work-Day-Schedule.git/)
+[Click here](https://afam-26.github.io/Work-Day-Schedule/)
 
   
